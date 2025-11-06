@@ -9,13 +9,15 @@ import UserDashboard from "./pages/UserDashboard";
 
 function App() {
   return (
-    <div className="max-w-4xl mx-auto my-5 px-4 bg-amber-50">
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/dashboard" element={<UserDashboard />} />
-      </Routes>
+    <div className="bg-slate-950">
+      <div className="max-w-4xl mx-auto ">
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/dashboard" element={<UserDashboard />} />
+        </Routes>
+      </div>
     </div>
   );
 }

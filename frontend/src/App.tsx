@@ -9,7 +9,10 @@ import UserDashboard from "./pages/UserDashboard";
 
 function App() {
   return (
-    <div className="bg-slate-950">
+    <div
+      className=" 
+      text-gray-900 bg-amber-50 dark:text-white dark:bg-gray-900"
+    >
       <div className="max-w-4xl mx-auto ">
         <Routes>
           <Route path="/" element={<LandingPage />} />

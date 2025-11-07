@@ -1,6 +1,7 @@
 /* imports */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 @import "tailwindcss";
 
 /* tailwind css config */
@@ -9,6 +10,7 @@
 
 @theme {
   --font-montserrat: "Montserrat", sans-serif;
+  --font-league-spartan: "League Spartan", sans-serif;
   --color-dark: #1e1e1e;
 }
 

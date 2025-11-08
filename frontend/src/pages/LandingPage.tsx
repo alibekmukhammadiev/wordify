@@ -1,28 +1,46 @@
 import React, { useState } from "react";
 
+// component
+import ModeLang from "../components/ModeLang";
+// image
+import hero from "../assets/hero.png";
+
 // navigate function
 import { useNavigate } from "react-router";
 
 // react-icons
-import { MdLanguage } from "react-icons/md";
-import { MdDarkMode } from "react-icons/md";
-import { MdLightMode } from "react-icons/md";
+import { RiMenu3Line } from "react-icons/ri";
+import { AiOutlineClose } from "react-icons/ai";
 
 export default function LandingPage() {
+  const [mode, setMode] = useState<boolean>(false);
+  const [modal, setModal] = useState<boolean>(true);
+
+  // useNavigate
   const navigate = useNavigate();
+
+  // toggle mode
+  const handleToggleMode = function () {
+    setMode((prev) => !prev);
+  };
+
+  // toggle modal
+  const handleToggleModal = function () {
+    setModal((prev) => !prev);
+  };
   return (
-    <div className="px-4">
-      <header className="flex items-center justify-between py-5">
+    <div>
+      <header className="flex items-center justify-between py-7">
         {/* Logo */}
         <div>
           <a href="#">
             <span className="font-league-spartan font-black text-xl">
-              wordify.
+              Wordify.
             </span>
           </a>
         </div>
         {/* Navigations */}
-        <ul className="list-none flex gap-5">
+        <ul className="list-none hidden gap-5 sm:flex">
           <li>
             <a className="hover:text-gray-300 transition-colors" href="#home">
               Home
@@ -43,19 +61,12 @@ export default function LandingPage() {
           </li>
         </ul>
         {/* Modes */}
-        <div className=" border-[1.5px] rounded-lg">
-
-        <div className="flex gap-2 p-1">
-          {false ? (
-            <MdDarkMode className="size-7 p-0.5  bg-white text-blue-500 duration-100 ease-in hover:cursor-pointer  hover:bg-gray-300 rounded-sm" />
-          ) : (
-            <MdLightMode className="size-8 p-1 bg-white text-amber-500 duration-100 ease-in hover:cursor-pointer  hover:bg-gray-300 rounded-sm" />
-          )}
-          <MdLanguage className="size-8 p-1  text-blue-500 bg-white rounded-sm" />
-        </div></div>
+        <div className="hidden sm:block rounded-lg">
+          <ModeLang handleToggleMode={handleToggleMode} mode={mode} />
+        </div>
 
         {/* Buttons */}
-        <div className="flex gap-5">
+        <div className="hidden sm:flex gap-5">
           <button
             className="text-gray-300 hover:cursor-pointer hover:text-gray-400 duration-100 ease-in"
             onClick={() => navigate("/login")}
@@ -63,13 +74,73 @@ export default function LandingPage() {
             Login
           </button>
           <button
-            className="hover:cursor-pointer hover:text-gray-200 hover:bg-teal-600 bg-teal-500 duration-100 ease-in px-4.5 py-1.5 rounded-sm"
+            className="hover:cursor-pointer hover:text-gray-200 hover:bg-teal-600 bg-teal-600 duration-100 ease-in px-4.5 py-1.5 rounded-sm"
             onClick={() => navigate("/register")}
           >
             Sign Up
           </button>
         </div>
+        {/* mobile screen navbar */}
+        <div className="flex items-center gap-5 sm:hidden">
+          <ModeLang handleToggleMode={handleToggleMode} mode={mode} />
+          {!modal ? (
+            <AiOutlineClose
+              onClick={handleToggleModal}
+              className="block sm:hidden size-8 p-1 text-white duration-100 ease-in hover:cursor-pointer  hover:text-gray-400 rounded-sm"
+            />
+          ) : (
+            <RiMenu3Line
+              onClick={handleToggleModal}
+              className="block sm:hidden size-8 p-1 text-white duration-100 ease-in hover:cursor-pointer  hover:text-gray-400 rounded-sm"
+            />
+          )}
+        </div>
       </header>
+      {/* hero section start */}
+      <section className="relative flex flex-col-reverse gap-5 sm:gap-0 sm:flex-row py-10">
+        {/* modal navbar start */}
+        {!modal && (
+          <div className="w-1/2 absolute right-0 top-0 z-1 bg-gray-800 shadow-sm shadow-gray-900">
+            <ul className="flex flex-col gap-3 list-none py-5">
+              <a href="#home">
+                <li className="transition-colors hover:bg-teal-600 px-7 py-2">
+                  Home
+                </li>
+              </a>
+
+              <a href="#home">
+                <li className="transition-colors hover:bg-teal-600 px-7 py-2">
+                  About
+                </li>
+              </a>
+              <a href="#home">
+                <li className="transition-colors hover:bg-teal-600 px-7 py-2">
+                  Features
+                </li>
+              </a>
+            </ul>
+          </div>
+        )}
+
+        {/* modal navbar end */}
+        <div className="flex  flex-col justify-center items-center sm:items-start gap-8 sm:w-1/2">
+          <h1 className="font-league-spartan font-bold text-4xl text-center sm:text-left sm:text-6xl">
+            This is the Header
+          </h1>
+          <p className="text-center sm:text-left">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            nisi nesciunt aspernatur aliquam nemo numquam optio ea praesentium!
+            Commodi, tempore?
+          </p>
+          <button className="hover:cursor-pointer hover:text-gray-200 hover:bg-teal-600 bg-teal-600 duration-100 ease-in px-4.5 py-1.5 rounded-sm">
+            Get Started
+          </button>
+        </div>
+        <div className="self-center w-2/3 sm:w-1/2">
+          <img src={hero} alt="Hero Section Image" />
+        </div>
+      </section>
+      {/* hero section end */}
     </div>
   );
 }

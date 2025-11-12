@@ -42,18 +42,18 @@ export default function LandingPage() {
         {/* Navigations */}
         <ul className="list-none hidden gap-5 sm:flex">
           <li>
-            <a className="hover:text-gray-300 transition-colors" href="#home">
+            <a className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="#home">
               Home
             </a>
           </li>
           <li>
-            <a className="hover:text-gray-300 transition-colors" href="#about">
+            <a className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="#about">
               About
             </a>
           </li>
           <li>
             <a
-              className="hover:text-gray-300 transition-colors"
+              className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
               href="#features"
             >
               Features
@@ -68,13 +68,13 @@ export default function LandingPage() {
         {/* Buttons */}
         <div className="hidden sm:flex gap-5">
           <button
-            className="text-gray-300 hover:cursor-pointer hover:text-gray-400 duration-100 ease-in"
+            className="text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:cursor-pointer dark:hover:text-gray-400 duration-100 ease-in"
             onClick={() => navigate("/login")}
           >
             Login
           </button>
           <button
-            className="hover:cursor-pointer hover:text-gray-200 dark:hover:bg-teal-700 bg-teal-600 duration-100 ease-in px-4.5 py-1.5 rounded-sm"
+            className="text-white hover:cursor-pointer hover:bg-teal-700 bg-teal-600 duration-100 ease-in px-4.5 py-1.5 rounded-sm"
             onClick={() => navigate("/register")}
           >
             Sign Up

@@ -15,17 +15,17 @@ export default function ModeLang({ mode, handleToggleMode }: ModeLangProps) {
       {!mode ? (
         <MdDarkMode
           onClick={handleToggleMode}
-          className="size-8 p-1   text-blue-400 duration-100 ease-in hover:cursor-pointer hover:text-blue-300  "
+          className="size-8 p-1   text-blue-400 bg-amber-100 hover:bg-amber-200 duration-100 ease-in hover:cursor-pointer hover:text-blue-500 rounded-md  dark:bg-gray-700 dark:hover:bg-gray-800 shadow-sm dark:shadow-gray-900   "
         />
       ) : (
         <MdLightMode
           onClick={handleToggleMode}
-          className="size-8 p-1 text-amber-400  duration-100 ease-in hover:cursor-pointer hover:text-amber-300  "
+          className="size-8 p-1 text-amber-400 bg-amber-100 hover:bg-amber-200 duration-100 ease-in hover:cursor-pointer hover:text-amber-500 rounded-md  dark:bg-gray-700 dark:hover:bg-gray-800 shadow-sm dark:shadow-gray-900  "
         />
       )}
       <select
-        className="px-2 transition-colors rounded-md bg-amber-50 dark:bg-gray-800 shadow-sm dark:shadow-gray-900  
-                 focus:outline-none focus:ring-1 focus:ring-teal-400 cursor-pointer"
+        className="px-2 transition-colors rounded-md bg-amber-100 hover:bg-amber-200 dark:bg-gray-700 dark:hover:bg-gray-800 shadow-sm dark:shadow-gray-900  
+                 focus:outline-none  cursor-pointer"
       >
         <option className="" value="en">
           EN

@@ -24,7 +24,7 @@ export default function ModeLang({ mode, handleToggleMode }: ModeLangProps) {
         />
       )}
       <select
-        className="px-2 transition-colors rounded-md bg-gray-800 shadow-sm shadow-gray-900  
+        className="px-2 transition-colors rounded-md bg-amber-50 dark:bg-gray-800 shadow-sm dark:shadow-gray-900  
                  focus:outline-none focus:ring-1 focus:ring-teal-400 cursor-pointer"
       >
         <option className="" value="en">

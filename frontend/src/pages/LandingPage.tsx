@@ -132,7 +132,7 @@ export default function LandingPage() {
             nisi nesciunt aspernatur aliquam nemo numquam optio ea praesentium!
             Commodi, tempore?
           </p>
-          <button className="hover:cursor-pointer hover:text-gray-200 hover:bg-teal-600 bg-teal-600 duration-100 ease-in px-4.5 py-1.5 rounded-sm">
+          <button className="text-white hover:cursor-pointer hover:text-gray-200 hover:bg-amber-700 bg-amber-600 duration-100 ease-in px-4.5 py-1.5 rounded-sm">
             Get Started
           </button>
         </div>

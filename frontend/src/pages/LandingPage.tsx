@@ -42,12 +42,18 @@ export default function LandingPage() {
         {/* Navigations */}
         <ul className="list-none hidden gap-5 sm:flex">
           <li>
-            <a className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="#home">
+            <a
+              className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+              href="#home"
+            >
               Home
             </a>
           </li>
           <li>
-            <a className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors" href="#about">
+            <a
+              className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+              href="#about"
+            >
               About
             </a>
           </li>
@@ -86,12 +92,12 @@ export default function LandingPage() {
           {!modal ? (
             <AiOutlineClose
               onClick={handleToggleModal}
-              className="block sm:hidden size-8 p-1 text-white duration-100 ease-in hover:cursor-pointer  hover:text-gray-400 rounded-sm"
+              className="block sm:hidden size-8 p-1.5  bg-amber-100 hover:bg-amber-200 duration-100 ease-in hover:cursor-pointer  rounded-md  dark:bg-gray-700  shadow-sm dark:shadow-gray-900"
             />
           ) : (
             <RiMenu3Line
               onClick={handleToggleModal}
-              className="block sm:hidden size-8 p-1 text-white duration-100 ease-in hover:cursor-pointer  hover:text-gray-400 rounded-sm"
+              className="block sm:hidden size-8 p-1.5 bg-amber-100 hover:bg-amber-200 duration-100 ease-in hover:cursor-pointer  rounded-md  dark:bg-gray-700  shadow-sm dark:shadow-gray-900"
             />
           )}
         </div>
@@ -100,21 +106,21 @@ export default function LandingPage() {
       <section className="relative flex flex-col-reverse gap-5 sm:gap-0 sm:flex-row py-10">
         {/* modal navbar start */}
         {!modal && (
-          <div className="w-1/2 absolute right-0 top-0 z-1 bg-gray-800 shadow-sm shadow-gray-900">
-            <ul className="flex flex-col gap-3 list-none py-5">
+          <div className="w-1/2 absolute right-0 top-0 z-1 bg-amber-100 dark:bg-gray-700 shadow-lg shadow-gray-500 dark:shadow-gray-900">
+            <ul className="flex flex-col  list-none py-5">
               <a href="#home">
-                <li className="transition-colors hover:bg-teal-600 px-7 py-2">
+                <li className="transition-colors text-white bg-teal-600 px-7 py-3">
                   Home
                 </li>
               </a>
 
               <a href="#home">
-                <li className="transition-colors hover:bg-teal-600 px-7 py-2">
+                <li className="transition-colors hover:bg-teal-600 px-7 py-3">
                   About
                 </li>
               </a>
               <a href="#home">
-                <li className="transition-colors hover:bg-teal-600 px-7 py-2">
+                <li className="transition-colors hover:bg-teal-600 px-7 py-3">
                   Features
                 </li>
               </a>
@@ -132,7 +138,10 @@ export default function LandingPage() {
             nisi nesciunt aspernatur aliquam nemo numquam optio ea praesentium!
             Commodi, tempore?
           </p>
-          <button className="text-white hover:cursor-pointer hover:text-gray-200 hover:bg-amber-700 bg-amber-600 duration-100 ease-in px-4.5 py-1.5 rounded-sm">
+          <button
+            onClick={() => navigate("/register")}
+            className="text-white hover:cursor-pointer hover:text-gray-200 hover:bg-amber-700 bg-amber-600 duration-100 ease-in px-4.5 py-1.5 rounded-sm"
+          >
             Get Started
           </button>
         </div>

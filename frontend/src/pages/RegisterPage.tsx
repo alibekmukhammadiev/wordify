@@ -16,7 +16,7 @@ export default function RegisterPage() {
                    rounded-2xl shadow-lg p-8 transition-all duration-300"
       >
         <h2 className="text-2xl font-bold text-left mb-6 text-gray-800 dark:text-white font-[var(--font-league-spartan)]">
-          Sign Up
+         Register
         </h2>
 
         <form className="space-y-5">
@@ -37,7 +37,7 @@ export default function RegisterPage() {
                          bg-white/70 dark:bg-gray-900/70 
                          text-gray-800 dark:text-gray-100 
                          placeholder-gray-400 dark:placeholder-gray-500 
-                         focus:outline-none focus:ring-2 focus:ring-teal-500 transition-colors duration-200"
+                         focus:outline-none focus:ring-2 focus:ring-amber-500 transition-colors duration-200"
             />
           </div>
 
@@ -58,7 +58,7 @@ export default function RegisterPage() {
                          bg-white/70 dark:bg-gray-900/70 
                          text-gray-800 dark:text-gray-100 
                          placeholder-gray-400 dark:placeholder-gray-500 
-                         focus:outline-none focus:ring-2 focus:ring-teal-500 transition-colors duration-200"
+                         focus:outline-none focus:ring-2 focus:ring-amber-500 transition-colors duration-200"
             />
           </div>
 
@@ -79,14 +79,14 @@ export default function RegisterPage() {
                          bg-white/70 dark:bg-gray-900/70 
                          text-gray-800 dark:text-gray-100 
                          placeholder-gray-400 dark:placeholder-gray-500 
-                         focus:outline-none focus:ring-2 focus:ring-teal-500 transition-colors duration-200"
+                         focus:outline-none focus:ring-2 focus:ring-amber-500 transition-colors duration-200"
             />
           </div>
 
           {/* Button */}
           <button
             type="submit"
-            className="w-full bg-teal-600 hover:cursor-pointer hover:bg-teal-700 
+            className="w-full bg-amber-600 hover:cursor-pointer hover:bg-amber-700 
                        text-white font-semibold py-2 rounded-lg transition duration-200"
           >
             Sign Up
@@ -98,7 +98,7 @@ export default function RegisterPage() {
           Already have an account?{" "}
           <a
             href="/login"
-            className="text-blue-600 dark:text-blue-400 hover:underline"
+            className="text-amber-600 dark:text-amber-400 hover:underline"
           >
             Login
           </a>
@@ -107,3 +107,4 @@ export default function RegisterPage() {
     </div>
   );
 }
+

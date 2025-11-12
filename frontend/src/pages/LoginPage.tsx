@@ -3,9 +3,12 @@ import React from "react";
 export default function LoginPage() {
   return (
     <div className="flex flex-col min-h-screen items-center justify-center bg-amber-50 dark:bg-gray-900 transition-colors duration-300">
-      <div className="w-full flex justify-center max-w-md ">
-        <h1 className=" font-bold text-5xl py-5">Wordify.</h1>
+      {/* Logo / Title */}
+      <div className="w-full flex justify-center max-w-md">
+        <h1 className="font-bold text-5xl py-5">Wordify.</h1>
       </div>
+
+      {/* Login Card */}
       <div
         className="w-full max-w-md 
                    bg-white/80 dark:bg-gray-800/80 
@@ -34,7 +37,7 @@ export default function LoginPage() {
                          bg-white/70 dark:bg-gray-900/70 
                          text-gray-800 dark:text-gray-100 
                          placeholder-gray-400 dark:placeholder-gray-500 
-                         focus:outline-none focus:ring-2 focus:ring-teal-500 transition-colors duration-200"
+                         focus:outline-none focus:ring-2 focus:ring-amber-500 transition-colors duration-200"
             />
           </div>
 
@@ -55,14 +58,14 @@ export default function LoginPage() {
                          bg-white/70 dark:bg-gray-900/70 
                          text-gray-800 dark:text-gray-100 
                          placeholder-gray-400 dark:placeholder-gray-500 
-                         focus:outline-none focus:ring-2 focus:ring-teal-500 transition-colors duration-200"
+                         focus:outline-none focus:ring-2 focus:ring-amber-500 transition-colors duration-200"
             />
           </div>
 
           {/* Button */}
           <button
             type="submit"
-            className="w-full bg-teal-600 hover:cursor-pointer hover:bg-teal-700 
+            className="w-full bg-amber-600 hover:bg-amber-700 
                        text-white font-semibold py-2 rounded-lg transition duration-200"
           >
             Sign In
@@ -74,7 +77,7 @@ export default function LoginPage() {
           Don’t have an account?{" "}
           <a
             href="/register"
-            className="text-blue-600 dark:text-blue-400 hover:underline"
+            className="text-amber-600 dark:text-amber-400 hover:underline"
           >
             Sign up
           </a>

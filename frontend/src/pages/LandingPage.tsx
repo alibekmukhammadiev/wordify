@@ -74,7 +74,7 @@ export default function LandingPage() {
             Login
           </button>
           <button
-            className="hover:cursor-pointer hover:text-gray-200 hover:bg-teal-600 bg-teal-600 duration-100 ease-in px-4.5 py-1.5 rounded-sm"
+            className="hover:cursor-pointer hover:text-gray-200 dark:hover:bg-teal-700 bg-teal-600 duration-100 ease-in px-4.5 py-1.5 rounded-sm"
             onClick={() => navigate("/register")}
           >
             Sign Up
@@ -124,7 +124,7 @@ export default function LandingPage() {
 
         {/* modal navbar end */}
         <div className="flex  flex-col justify-center items-center sm:items-start gap-8 sm:w-1/2">
-          <h1 className="font-league-spartan font-bold text-4xl text-center sm:text-left sm:text-6xl">
+          <h1 className="font-league-spartan font-bold text-5xl text-center sm:text-left sm:text-6xl">
             This is the Header
           </h1>
           <p className="text-center sm:text-left">

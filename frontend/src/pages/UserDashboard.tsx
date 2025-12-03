@@ -15,9 +15,9 @@ export default function UserDashboard() {
   return (
     <div className="h-screen flex flex-col-reverse sm:flex-row justify-center text-white">
       {/* Sidebar */}
-      <aside className="sm:w-20 sm:border-r-2 sm:border-gray-700 flex sm:flex-col justify-around sm:justify-start items-center py-4 sm:py-6 sm:gap-6">
+      <aside className="sm:w-20 sm:border-r-2 sm:border-l-2 sm:border-gray-800 flex sm:flex-col justify-around sm:justify-start items-center py-4 sm:py-6 sm:gap-6">
         <div className="p-3 bg-teal-600 rounded-lg">
-          <h1 className="font-league-spartan font-black sm:text-xl">W.</h1>
+          <h1 className="font-league-spartan font-black sm:text-xl italic">W.</h1>
         </div>
 
         <button

@@ -22,6 +22,11 @@ export default function LandingPage() {
   // toggle mode
   const handleToggleMode = function () {
     setMode((prev) => !prev);
+    if (mode) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
   };
 
   // toggle modal

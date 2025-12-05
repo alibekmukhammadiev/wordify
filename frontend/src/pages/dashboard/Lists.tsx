@@ -6,9 +6,11 @@ export default function Lists() {
       {Array.from({ length: 6 }).map((_, i) => (
         <div
           key={i}
-          className="flex flex-col gap-1 transition-all hover:cursor-pointer hover:outline-teal-600 hover:outline-2 dark:bg-gray-700 hover:opacity-85 bg-gray-200 text-black dark:text-white p-4 rounded-lg"
+          className="flex flex-col gap-1 transition-all hover:cursor-pointer hover:translate-x-0.5  hover:opacity-85   dark:text-white bg-white/80 dark:bg-gray-800/80 
+                   backdrop-blur-md border border-gray-200 dark:border-gray-700
+                   rounded-2xl shadow-lg  p-4"
         >
-          <span className="font-league-spartan font-bold text-xl sm:text-2xl">
+          <span className="font-league-spartan font-bold text-xl sm:text-2xl text-gray-700 dark:text-white/80">
             List Item {i + 1}
           </span>
           <div className="self-end">

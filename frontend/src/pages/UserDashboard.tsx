@@ -15,16 +15,18 @@ export default function UserDashboard() {
   return (
     <div className="h-screen flex flex-col-reverse sm:flex-row justify-center text-white">
       {/* Sidebar */}
-      <aside className="sm:w-20 sm:border-r-2 sm:border-l-2 sm:border-gray-800 flex sm:flex-col justify-around sm:justify-start items-center py-4 sm:py-6 sm:gap-6">
+      <aside className="sm:w-20 sm:border-r-2 sm:border-l-2 sm:border-gray-800/20 dark:sm:border-gray-800  flex sm:flex-col justify-around sm:justify-start items-center py-4 sm:py-6 sm:gap-6">
         <div className="p-3 bg-teal-600 rounded-lg">
-          <h1 className="font-league-spartan font-black sm:text-xl italic">W.</h1>
+          <h1 className="font-league-spartan font-black sm:text-xl italic">
+            W.
+          </h1>
         </div>
 
         <button
           onClick={() => setActivePage("lists")}
-          className={`hover:cursor-pointer ${
+          className={`hover:cursor-pointer text-gray-700 dark:text-white  ${
             activePage === "lists"
-              ? " transition-all duration-100 outline-2 dark:outline-teal-600 dark:bg-gray-700 dark:hover:bg-gray-700"
+              ? " transition-all duration-100 outline-2 outline-teal-600 bg-amber-100 dark:bg-gray-700 dark:hover:bg-gray-700"
               : ""
           }  p-3 rounded-lg`}
         >
@@ -33,9 +35,9 @@ export default function UserDashboard() {
 
         <button
           onClick={() => setActivePage("statistics")}
-          className={`hover:cursor-pointer ${
+          className={`hover:cursor-pointer text-gray-700 dark:text-white   ${
             activePage === "statistics"
-              ? " transition-all duration-100 outline-2 dark:outline-teal-600 dark:bg-gray-700 dark:hover:bg-gray-700"
+              ? " transition-all duration-100 outline-2 outline-teal-600 bg-amber-100 dark:bg-gray-700 dark:hover:bg-gray-700"
               : ""
           }  p-3 rounded-lg`}
         >
@@ -44,9 +46,9 @@ export default function UserDashboard() {
 
         <button
           onClick={() => setActivePage("settings")}
-          className={`hover:cursor-pointer ${
+          className={`hover:cursor-pointer text-gray-700 dark:text-white  ${
             activePage === "settings"
-              ? " transition-all duration-100 outline-2 dark:outline-teal-600 dark:bg-gray-700 dark:hover:bg-gray-700"
+              ? " transition-all duration-100 outline-2 bg-amber-100 outline-teal-600 dark:bg-gray-700 dark:hover:bg-gray-700"
               : ""
           }  p-3 rounded-lg`}
         >
